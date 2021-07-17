@@ -1,0 +1,45 @@
+/*------------------------ 
+i fix container width : 960 px 
+is notebook and tablet size 
+
+ตั้งค่า element อื่น นอกจากตาราง
+---------------------------*/
+
+/*------------------------ media query pc 1920x1080 -----------------------*/
+/*---------- ขนาดจะอยู่ระหว่างครึ่งหน้าจอ-------------*/
+@media only screen and (max-width: 1200px) {
+  .bg-img {
+    height: auto;
+    background-size: 1500px 1500px;
+  }
+
+  .content-forget {
+    width: 60%;
+  }
+}
+
+/*------------------------ media query half display-----------------------*/
+/*---------- ขนาดจะอยู่ระหว่าง ipad ipad pro-------------*/
+@media only screen and (max-width: 800px) {
+  .bg-img {
+    height: auto;
+    background-size: 1100px 1100px;
+  }
+
+  .content-forget {
+    width: 60%;
+  }
+}
+
+/*------------------------ media query mobile -----------------------*/
+/*---------- ขนาดจะอยู่ระหว่างมือถือ ------------*/
+@media only screen and (max-width: 480px) {
+  .bg-img {
+    height: auto;
+    background-size: 850px 850px;
+  }
+
+  .content-forget {
+    width: 90%;
+  }
+}

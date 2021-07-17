@@ -1,0 +1,150 @@
+/*---------- import font google  ไม่ต้องแก้อะไร เป็นการ import font เฉยๆ -------------*/
+/*------------------------ font style -----------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/*------------------------ body -----------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.bg-img {
+  /*---------- คลาสรูปภาพพื้นหลังแก้เฉพาะตรงนี้ -------------*/
+  background-image: url("../../images/bg06.png");
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+/*------------------------ container box -----------------------*/
+.container {
+  /*---------- คลาส container (ขนาด-ความกว้าง) คลุม content ทั้งหมด -------------*/
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*------------------------ content -----------------------*/
+.content {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/*-------------------- login-form -------------------------*/
+.content-info {
+  /*---------- คลาสเข้าสู่ระบบ -------------*/
+  width: 30%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 3px 4px 3px 3px rgba(122, 122, 122, 0.1);
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  padding-top: 42px;
+  padding-left: 45px;
+  padding-bottom: 42px;
+  padding-right: 45px;
+}
+
+/*------------------------ content form footer -----------------------*/
+.forget-footer {
+  /*---------- คลาสปุ่มเข้าสู่ระบบ และ ย้อนกลับ -------------*/
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.back-form-btn {
+  box-shadow: 0px 4px 3px 3px rgba(122, 122, 122, 0.1);
+  border: 1px solid #152282;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+a.back-form-btn {
+  color: black;
+  font-family: "Sarabun", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/*------------------------ content table -----------------------*/
+.content-table {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 3px 4px 3px 3px rgba(122, 122, 122, 0.1);
+}
+
+table td,
+table th {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+table thead tr {
+  background: black;
+}
+
+table tbody tr {
+  height: 50px;
+}
+
+table td,
+table th {
+  text-align: center;
+}
+
+.table-head th {
+  font-family: "Sarabun", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  cursor: context-menu;
+}
+
+tbody tr {
+  font-family: "Sarabun", sans-serif;
+  font-size: 16px;
+  color: black;
+  cursor: context-menu;
+}
+
+tbody tr:hover {
+  background-color: whitesmoke;
+}

@@ -1,0 +1,264 @@
+/*---------- import font google  ไม่ต้องแก้อะไร เป็นการ import font เฉยๆ -------------*/
+/*------------------------ font style -----------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/*------------------------ body -----------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.bg-img {
+  /*---------- คลาสรูปภาพพื้นหลังแก้เฉพาะตรงนี้ -------------*/
+  background-image: url("../../images/bg01.png");
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+/*------------------------ container box -----------------------*/
+.container {
+  /*---------- คลาส container (ขนาด-ความกว้าง) คลุม content ทั้งหมด -------------*/
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*------------------------ content -----------------------*/
+.content {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/*-------------------- login-form -------------------------*/
+.content-login {
+  /*---------- คลาสเข้าสู่ระบบ -------------*/
+  width: 30%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 3px 4px 3px 3px rgba(122, 122, 122, 0.1);
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  padding-top: 42px;
+  padding-left: 45px;
+  padding-bottom: 42px;
+  padding-right: 45px;
+}
+
+.login-form-title {
+  /*---------- ตัวอักษรส่วนหัวเข้าสู่ระบบ -------------*/
+  text-align: center;
+  display: block;
+  font-family: "Sarabun", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: black;
+  cursor: context-menu;
+  margin-bottom: 25px;
+}
+
+input {
+  /*---------- r -------------*/
+  width: 100%;
+  font-family: "Sarabun", sans-serif;
+  font-size: 12px;
+  color: #333333;
+  margin: auto;
+  margin-top: 3px;
+  height: 50px;
+  padding: 0 7px 0 43px;
+}
+
+.col-form-label {
+  font-family: "Sarabun", sans-serif;
+  text-transform: uppercase;
+  color: black;
+  font-size: 15px;
+}
+
+.text-right {
+  /*----------คลาสของประโยค ลืมชื่อเข้าสู่ระบบ และ ลืมรหัสผ่าน -------------*/
+  text-align: right;
+  margin: auto;
+  margin-top: 15px;
+  width: 100%;
+}
+
+a {
+  font-family: "Sarabun", sans-serif;
+  font-size: 12px;
+  color: rgb(192, 192, 192);
+  text-decoration: none;
+}
+
+/*------------------------ content form footer -----------------------*/
+.login-footer {
+  /*---------- คลาสปุ่มเข้าสู่ระบบ และ ย้อนกลับ -------------*/
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.wrap-login-form-btn {
+  box-shadow: 0px 4px 3px 3px rgba(122, 122, 122, 0.1);
+  border-radius: 30px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.login-form-bgbtn {
+  position: absolute;
+  z-index: -1;
+  width: 300%; /*------------------------ check -----------------------*/
+  height: 100%; /*------------------------ check -----------------------*/
+  background: linear-gradient(to left, #00dbde, #00dbde, #152282, #152282);
+  left: -100%;
+
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+}
+
+.wrap-login-form-btn:hover .login-form-bgbtn {
+  left: 0;
+}
+
+.login-form-btn {
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+a.login-form-btn {
+  color: white;
+  font-family: "Sarabun", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.back-form-btn {
+  box-shadow: 0px 4px 3px 3px rgba(122, 122, 122, 0.1);
+  border: 1px solid #152282;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+a.back-form-btn {
+  color: black;
+  font-family: "Sarabun", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/*--------------------- input detail ------------------------*/
+input {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus,
+input:focus {
+  border-color: transparent !important;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+
+textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+input::-webkit-input-placeholder {
+  color: #adadad;
+}
+
+input:-moz-placeholder {
+  color: #adadad;
+}
+
+input::-moz-placeholder {
+  color: #adadad;
+}
+
+input:-ms-input-placeholder {
+  color: #adadad;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #adadad;
+}
+
+textarea:-moz-placeholder {
+  color: #adadad;
+}
+
+textarea::-moz-placeholder {
+  color: #adadad;
+}
+
+textarea:-ms-input-placeholder {
+  color: #adadad;
+}

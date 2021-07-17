@@ -1,0 +1,238 @@
+/*---------- import font google  ไม่ต้องแก้อะไร เป็นการ import font เฉยๆ -------------*/
+
+/*------------------------ font style -----------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/*---------- โค้ด body ตัวเว็บทั้งหน้า -------------*/
+
+/*------------------------ body -----------------------*/
+
+* {
+  /*---------- ทำการ reset -------------*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.bg-img {
+  /*---------- คลาสรูปภาพพื้นหลังแก้เฉพาะตรงนี้ -------------*/
+  background-image: url("../../images/bg03.png");
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+/*------------------------ container box -----------------------*/
+
+.container {
+  /*---------- คลาส container (ขนาด-ความกว้าง) คลุม content ทั้งหมด -------------*/
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*------------------------ header -----------------------*/
+
+header {
+  /*---------- พื้นหลัง navbar -------------*/
+  width: 100%;
+  height: 120px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 2px 3px 2px 2px rgba(122, 122, 122, 0.1);
+}
+
+.nav-grid {
+  /*---------- วางกริด-------------*/
+  display: grid;
+  grid-template-columns: 700px 1fr;
+}
+
+.logo {
+  /*---------- ตัวอักษรชื่อระบบ แก้ตรงนี้ อันนี้มีตั้งความห่าง-สูง กับ สีตัวอักษรไว้ -------------*/
+  margin-top: 10px;
+  color: black;
+}
+
+.logo h1 {
+  /*---------- ตัวอักษรชื่อระบบ แก้ตรงนี้ อันนี้มีตั้งขนาด ลักษณะ cursor ตัวอักษรไว้ -------------*/
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: "Sarabun", sans-serif;
+  cursor: context-menu;
+  /*---------- cursor คือ เวลาเลื่อนเม้าส์ไปขี้จะเป็นรูป context-menu  -------------*/
+}
+
+img {
+  /*---------- โลโก้ -------------*/
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+ul.menu {
+  /*---------- กริด 2 ช่อง ชื่อระบบ 1 ปุ่มด้านขวา 1-------------*/
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  margin-top: 10%;
+  text-align: center;
+}
+
+ul.menu li {
+  list-style: none;
+}
+
+ul.menu li a {
+  /*---------- ตัวอักษร ปุ่มด้านขวา-------------*/
+  color: black;
+  text-decoration: none;
+  /*---------- ไม่เอาขีเส้นใต้-------------*/
+  text-transform: uppercase;
+  /*---------- เอาตัวอักษรตัวใหญ่-------------*/
+  padding: 7px 27px;
+  font-family: "Sarabun", sans-serif;
+  font-size: 20px;
+}
+
+#logout {
+  /*---------- ปุ่มออกจากระบบ -------------*/
+  color: white;
+}
+
+.logout {
+  /*---------- อันนี้เป้ฯลักษณะของปุ่ม-------------*/
+  background: #0000d2;
+  box-shadow: 2px 3px 2px 2px rgba(122, 122, 122, 0.1);
+  border-radius: 40px;
+  transition: 0.3s ease-in-out;
+}
+
+.logout:hover {
+  /*---------- เวลาเลื่อนเม้าส์ไปชี้ปุ่่มจะ swip เป็นสีดำ-------------*/
+  background: black;
+}
+
+/*------------------------ content -----------------------*/
+
+.content {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/*------------------------ content heading -----------------------*/
+
+.content-heading {
+  /*---------- คลาสส่วนยินดีต้อนรับ-------------*/
+  width: 100%;
+  margin-top: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 3px 4px 3px 3px rgba(122, 122, 122, 0.1);
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.heading-form-title {
+  /*---------- คลาสส่วนยินดีต้อนรับ รูปแบบตัวอักษร-------------*/
+  text-align: center;
+  display: block;
+  font-family: "Sarabun", sans-serif;
+  text-transform: uppercase;
+  font-size: 21px;
+  color: black;
+  cursor: context-menu;
+}
+
+/*------------------------ content profile -----------------------*/
+
+.content-profile {
+  /*---------- คลาสส่วนโปรไฟล์-------------*/
+  width: 100%;
+  margin-top: 10px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 3px 4px 3px 3px rgba(122, 122, 122, 0.1);
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+.profile-form-title {
+  /*---------- คลาสส่วนโปรไฟล์ รูปแบบตัวอักษร-------------*/
+  text-align: center;
+  display: block;
+  font-family: "Sarabun", sans-serif;
+  text-transform: uppercase;
+  font-size: 19px;
+  color: black;
+  cursor: context-menu;
+  padding-top: 15px;
+}
+
+.profile-form-title2 {
+  /*---------- คลาสส่วนโปรไฟล์ เส้นขีดคั่นกลาง-------------*/
+  margin-top: 13px;
+  margin-left: 50px;
+  display: block;
+  border-top: black solid 1px;
+  text-align: center;
+  width: 90%;
+}
+
+/*------------------------ content service -----------------------*/
+
+.content-services {
+  /*---------- คลาสส่วนปุ่มเซอร์วิส ------------*/
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.content-services-grid {
+  /*---------- ควางกริด 3 ช่อง ห่างกัน 3 rem-------------*/
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}
+
+.content-services-item {
+  /*---------- รูปแบบของปุ่ม-------------*/
+  background: white;
+  border: 3px solid #b7b3ee;
+  box-shadow: 2px 3px 2px 2px rgba(122, 122, 122, 0.1);
+  border-radius: 40px;
+  transition: 0.3s ease-in-out;
+}
+
+.content-services-item:hover {
+  /*---------- เวลาลากเม้าส์ไปชี้ที่ปุ่มจะเป็นสีม่วงทั้งหมด -------------*/
+  background: #958eebef;
+  border: none;
+}
+
+.content-services-item a {
+  /*---------- ตัวอักษรภายในปุ่ม-------------*/
+  text-align: center;
+  display: block;
+  font-family: "Sarabun", sans-serif;
+  text-transform: uppercase;
+  font-size: 19px;
+  color: black;
+  padding: 12px 32px;
+}
+
+.content-services-item a:hover {
+  /*---------- เวลาลากเม้าส์ไปที่ปุ่ม ตัวอักษรภายในปุ่มจะเป็นสีขาว-------------*/
+  text-decoration: none;
+  color: white;
+}

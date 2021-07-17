@@ -1,0 +1,137 @@
+/*------------------------ 
+i fix container width : 960 px 
+is notebook and tablet size 
+
+ตั้งค่า element อื่น นอกจากตาราง
+---------------------------*/
+
+/*------------------------ media query pc 1920x1080 -----------------------*/
+
+/*---------- ขนาดจะอยู่ระหว่างครึ่งหน้าจอ-------------*/
+
+@media only screen and (max-width: 1200px) {
+  header {
+    height: 80px;
+  }
+
+  .logo {
+    margin-top: 20px;
+  }
+
+  .logo h1 {
+    font-size: 23px;
+    text-align: center;
+  }
+
+  img {
+    width: 0px;
+    height: 0px;
+  }
+
+  .content-heading {
+    margin-top: 20px;
+  }
+
+  .content-services {
+    margin-top: 20px;
+  }
+  .content-services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 60%;
+  }
+  .content-services-item a {
+    font-size: 20px;
+    padding: 7px 27px;
+  }
+}
+
+/*------------------------ media query half display-----------------------*/
+
+@media only screen and (max-width: 800px) {
+  /*---------- ขนาดจะอยู่ระหว่าง ipad ipad pro-------------*/
+  header {
+    height: 70px;
+  }
+
+  .logo {
+    margin-top: 20px;
+  }
+
+  .logo h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  img {
+    width: 0px;
+    height: 0px;
+  }
+
+  .content-heading {
+    margin-top: 20px;
+  }
+
+  .content-services {
+    margin-top: 20px;
+  }
+  .content-services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    margin-left: 15%;
+  }
+  .content-services-item a {
+    font-size: 19px;
+    padding: 7px 27px;
+  }
+}
+
+/*------------------------ media query mobile -----------------------*/
+
+/*---------- ขนาดจะอยู่ระหว่างมือถือ ------------*/
+
+@media only screen and (max-width: 480px) {
+  header {
+    height: 60px;
+  }
+
+  .logo {
+    margin-top: 20px;
+  }
+
+  .logo h1 {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  img {
+    width: 0px;
+    height: 0px;
+  }
+
+  .content-heading {
+    margin-top: 20px;
+  }
+
+  .content-services {
+    margin-top: 20px;
+  }
+
+  .content-services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .content-services-item a {
+    font-size: 12px;
+    padding: 5px 25px;
+  }
+
+  #calendar {
+    max-width: 500px;
+    font-size: 9px;
+  }
+}

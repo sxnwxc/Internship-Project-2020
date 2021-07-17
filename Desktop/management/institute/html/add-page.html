@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--required meta tags-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add</title>
+
+    <!--ma CSS-->
+    <!--โค้ด css ทั้งหน้า ถ้าจะแก้พวกรูปแบบของหน้า Manage User ทั้งหมด ไฟล์ข้างล่างนี้-->
+    <link rel="stylesheet" href="../css/style-add.css" />
+    <!--โค้ด reponsive ถ้าจะแก้พวกขนาดเวลาอยู่บนอุปกรณ์อื่นแก้-เพิ่มข้างล่างนี้-->
+    <link rel="stylesheet" href="../responsive/res-add.css" />
+    <!--โค้ด reponsive ถ้าจะแก้พวก "ตาราง" อย่างเดียวนแก้-เพิ่มข้างล่างนี้-->
+    <link rel="stylesheet" href="../responsive/res-tableadd.css" />
+
+    <!--module font google สามารถเรียกใช้ได้ทุกตัวอักษรของ google-->
+    <!--font style google-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+
+    <!--module font awesome สามารถเรียกใช้ได้ทุกไอคอน จากเว็บ font awesome-->
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!--module ปฏิทินในฟอร์ม-->
+    <!--mini calendar select-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css"
+    />
+
+    <!--module css ของ bootstrap-->
+    <!--bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body onload="startTime()">
+    <!--start bg-img-->
+    <div class="bg-img">
+      <!-- มีการเรียกใช้ start time คือส่วนทที่แสดง วันที่ เวลาแบบ real time-->
+
+      <!--โค้ดส่วนของ navbar มีชื่อระบบ หน้าแรก ออกจากระบบ ถ้าจะแก้ส่วนหัวแก้เฉพาะที่คอมเม้นคั่นไว้-->
+      <!--start header-->
+      <header>
+        <nav>
+          <div class="container">
+            <div class="nav-grid">
+              <div class="logo">
+                <!--logo left side-->
+                <h1>
+                  <img
+                    src="../../images/logo_blue.png"
+                    alt="DOP"
+                  />ระบบติดตามโครงการสำหรับผู้บริหาร
+                </h1>
+              </div>
+              <ul class="menu">
+                <!--menu right side-->
+                <li><a href="../html/home-page.html">หน้าแรก</a></li>
+                <li>
+                  <a href="../../main/html/main.php" class="logout" id="logout"
+                    >ออกจากระบบ</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!--end header-->
+      <!--จบโค้ดส่วนของ navbar มีชื่อระบบ หน้าแรก ออกจากระบบ-->
+
+      <!--โค้ดส่วนของ content ปุ่ม ตาราง -->
+      <!--start content-->
+      <section class="content">
+        <div class="container">
+          <!--โค้ดส่วนของป่มกลับ-->
+          <div class="content-back">
+            <div class="content-back-grid">
+              <!--start back button-->
+              <a href="../html/home-page.html" class="button-back"
+                ><i class="fa fa-angle-left" aria-hidden="true"></i
+              ></a>
+              <!--end back button-->
+            </div>
+          </div>
+          <!--โค้ดส่วนของโปรไฟล์ วันที่เวลา เรียงตามชื่อคลาส-->
+          <!--start profile content-->
+          <div class="content-profile">
+            <div class="content-profile-grid">
+              <!--start profile box-->
+              <span class="profile-form-title"
+                >ชื่อ&nbsp:&nbspสุธินี&nbspวุทธิโช</span
+              >
+              <span class="profile-form-title"
+                >หน่วยงาน&nbsp:&nbspศูนย์ฟื้นฟูสมรรถภาพผู้ติดยาเสพติด</span
+              >
+              <span class="profile-form-title2"></span>
+              <span class="profile-form-title">
+                <script language="javascript">
+                  now = new Date();
+                  var thday = new Array(
+                    "อาทิตย์",
+                    "จันทร์",
+                    "อังคาร",
+                    "พุธ",
+                    "พฤหัส",
+                    "ศุกร์",
+                    "เสาร์"
+                  );
+                  var thmonth = new Array(
+                    "มกราคม",
+                    "กุมภาพันธ์",
+                    "มีนาคม",
+                    "เมษายน",
+                    "พฤษภาคม",
+                    "มิถุนายน",
+                    "กรกฎาคม",
+                    "สิงหาคม",
+                    "กันยายน",
+                    "ตุลาคม",
+                    "พฤศจิกายน",
+                    "ธันวาคม"
+                  );
+
+                  function startTime() {
+                    var today = new Date();
+                    var h = today.getHours();
+                    var m = today.getMinutes();
+                    var s = today.getSeconds();
+                    // add a zero in front of numbers<10
+                    m = checkTime(m);
+                    s = checkTime(s);
+                    document.getElementById("txt_time").innerHTML =
+                      "เวลา " + h + ":" + m + ":" + s + " น.";
+                    t = setTimeout(function () {
+                      startTime();
+                    }, 500);
+                  }
+
+                  function checkTime(i) {
+                    if (i < 10) {
+                      i = "0" + i;
+                    }
+                    return i;
+                  }
+
+                  document.write(
+                    "วัน" +
+                      thday[now.getDay()] +
+                      "ที่ " +
+                      now.getDate() +
+                      " " +
+                      thmonth[now.getMonth()] +
+                      " " +
+                      (0 + now.getFullYear() + 543)
+                  );
+                </script>
+              </span>
+              <span class="profile-form-title" id="txt_time"></span>
+              <!--end profile box-->
+            </div>
+          </div>
+          <!--end profile content-->
+          <!--จบโค้ดส่วนของโปรไฟล์ วันที่เวลา เรียงตามชื่อคลาส-->
+          <!--start add content-->
+          <div class="content-heading">
+            <div class="content-heading-grid">
+              <!--start add button-->
+              <a
+                href="#"
+                class="button"
+                data-toggle="modal"
+                data-target="#modalAddForm"
+              >
+                <i class="fa fa-plus">&nbsp&nbspเพิ่มโครงการ</i>
+              </a>
+              <!--end add button-->
+              <div
+                class="modal fade"
+                id="modalAddForm"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="modalAddFormLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <!--start modal head-->
+                    <div class="modal-header">
+                      <spans class="modal-title" id="modalAddFormLabel">
+                        เพิ่มโครงการ
+                      </spans>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-labelห="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <!--end modal head-->
+                    <!--start modal body-->
+                    <div class="modal-body">
+                      <form action="#">
+                        <div class="form-group">
+                          <label for="#" class="col-form-label"
+                            >ชื่อโครงการ</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="กรุณาใส่ชื่อโครงการ..."
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="#" class="col-form-label"
+                            >รายละเอียดโครงการ</label
+                          >
+                          <textarea
+                            class="form-control"
+                            placeholder="กรุณาใส่รายละเอียดโครงการ..."
+                          ></textarea>
+                        </div>
+                        <div class="form-group">
+                          <label for="#" class="col-form-label"
+                            >วันที่เริ่มต้น</label
+                          >
+                          <input
+                            id="datepicker"
+                            type="text"
+                            class="form-control"
+                            placeholder="กรุณาใส่วันที่เริ่มต้น..."
+                          />
+                          <script>
+                            $("#datepicker").datepicker({
+                              uiLibrary: "bootstrap4",
+                            });
+                          </script>
+                        </div>
+                        <div class="form-group">
+                          <label for="#" class="col-form-label"
+                            >วันที่สิ้นสุด</label
+                          >
+                          <input
+                            id="datepicker2"
+                            type="text"
+                            class="form-control"
+                            placeholder="กรุณาใส่วันที่สิ้นสุด..."
+                          />
+                          <script>
+                            $("#datepicker2").datepicker({
+                              uiLibrary: "bootstrap4",
+                            });
+                          </script>
+                        </div>
+                        <label for="#" class="col-form-label"
+                          >มอบให้&nbsp</label
+                        >
+                        <div class="input-group mb-3">
+                          <div class="form-group">
+                            <button class="btn btn-outline-secondary">
+                              ตำแหน่ง
+                            </button>
+                          </div>
+                          <select name="#" id="#" class="custom-select">
+                            <option selected>กรุณาเลือกตำแหน่ง...</option>
+                            <option value="1">อธิบดีกรม</option>
+                            <option value="2">รองอธิบดีกรม</option>
+                          </select>
+                        </div>
+                        <label for="#" class="col-form-label">หน่วยงาน</label>
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            readonly
+                            class="form-control"
+                            value="ศูนย์ฟื้นฟูสมรรถภาพผู้ติดยาเสพติด"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="#" class="col-form-label"
+                            >เบอร์โทรติดต่อ</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="กรุณาใส่เบอร์โทรติดต่อ..."
+                          />
+                        </div>
+                      </form>
+                    </div>
+                    <!--end modal body-->
+                    <!--start modal footer-->
+                    <div class="modal-footer">
+                      <button class="btn-danger" data-dismiss="modal">
+                        ยกเลิก
+                      </button>
+                      <button class="btn-success">ตกลง</button>
+                    </div>
+                    <!--end modal footer-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end add content-->
+          <!--จบโค้ดส่วนของ content ปุ่ม ตาราง -->
+          <!--start table content-->
+          <div class="content-table">
+            <div class="content-table-grid">
+              <div class="wrap-tale">
+                <div class="table">
+                  <table>
+                    <!--start thead head-->
+                    <thead>
+                      <tr class="table-head">
+                        <th>ลำดับ</th>
+                        <th>โครงการ</th>
+                        <th>วันที่เริ่มต้น</th>
+                        <th>วันที่สิ้นสุด</th>
+                        <th>รายละเอียด</th>
+                        <th>แก้ไข</th>
+                      </tr>
+                    </thead>
+                    <!--end thead head-->
+                    <!--start tbody-->
+                    <tbody>
+                      <!--start column-->
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          โครงการตามประเด็นยุทธศาสตร์ประจําปีงบประมาณ&nbspพ.ศ.2559&nbspประเด็นยุทธศาสตร์
+                        </td>
+                        <td>14-11-2020</td>
+                        <td>15-11-2020</td>
+                        <td>เริ่ม&nbsp10.00&nbspน.</td>
+                        <td data-toggle="modal" data-target="#modalEditForm">
+                          <a href="#" class="btn-social btn-edit">
+                            <i class="fa fa-pencil"></i>
+                          </a>
+                          <div
+                            class="modal fade"
+                            id="modalEditForm"
+                            tabindex="-1"
+                            role="dialog"
+                            aria-labelledby="modalEditFormLabel"
+                            aria-hidden="true"
+                          >
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <!--start modal head-->
+                                <div class="modal-header">
+                                  <span
+                                    class="modal-title"
+                                    id="modalEditFormLabel"
+                                  >
+                                    แก้ไขข้อมูลโครงการ
+                                  </span>
+                                  <button
+                                    type="button"
+                                    class="close"
+                                    data-dismiss="modal"
+                                    aria-label="Close"
+                                  >
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <!--end modal head-->
+                                <!--start modal body-->
+                                <div class="content-heading-grid">
+                                  <div class="modal-body">
+                                    <form action="#">
+                                      <div class="form-group">
+                                        <label for="#" class="col-form-label"
+                                          >ลำดับ</label
+                                        >
+                                        <input
+                                          type="text"
+                                          readonly
+                                          class="form-control"
+                                          value="1"
+                                        />
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="#" class="col-form-label"
+                                          >ชื่อโครงการ</label
+                                        >
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          placeholder="กรุณาใส่ชื่อโครงการ..."
+                                        />
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="#" class="col-form-label"
+                                          >รายละเอียดโครงการ</label
+                                        >
+                                        <textarea
+                                          class="form-control"
+                                          placeholder="กรุณาใส่รายละเอียดโครงการ..."
+                                        ></textarea>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="#" class="col-form-label"
+                                          >วันที่เริ่มต้น</label
+                                        >
+                                        <input
+                                          type="text"
+                                          readonly
+                                          class="form-control"
+                                          value="14-11-2020"
+                                        />
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="#" class="col-form-label"
+                                          >วันที่สิ้นสุด</label
+                                        >
+                                        <input
+                                          type="text"
+                                          readonly
+                                          class="form-control"
+                                          value="15-11-2020"
+                                        />
+                                      </div>
+                                      <label for="#" class="col-form-label"
+                                        >มอบให้&nbsp</label
+                                      >
+                                      <div class="form-group">
+                                        <input
+                                          type="text"
+                                          readonly
+                                          class="form-control"
+                                          value="อธิบดีกรม"
+                                        />
+                                      </div>
+                                      <label for="#" class="col-form-label"
+                                        >หน่วยงาน</label
+                                      >
+                                      <div class="form-group">
+                                        <input
+                                          type="text"
+                                          readonly
+                                          class="form-control"
+                                          value="ศูนย์ฟื้นฟูสมรรถภาพผู้ติดยาเสพติด"
+                                        />
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="#" class="col-form-label"
+                                          >เบอร์โทรติดต่อ</label
+                                        >
+                                        <input
+                                          type="text"
+                                          readonly
+                                          class="form-control"
+                                          value="xxx-xxx-xxxx"
+                                        />
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                                <!--end modal body-->
+                                <!--start modal footer-->
+                                <div class="modal-footer">
+                                  <button
+                                    class="btn-danger"
+                                    data-dismiss="modal"
+                                  >
+                                    ยกเลิก
+                                  </button>
+                                  <button class="btn-success">ตกลง</button>
+                                </div>
+                                <!--end modal footer-->
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <!--end main column-->
+                    </tbody>
+                    <!--start tbody-->
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end table content-->
+        </div>
+      </section>
+      <!--end content-->
+    </div>
+    <!--end bg-img-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

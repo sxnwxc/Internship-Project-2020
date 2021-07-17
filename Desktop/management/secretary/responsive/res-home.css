@@ -1,0 +1,296 @@
+/*------------------------ 
+i fix container width : 960 px 
+is notebook and tablet size 
+
+ตั้งค่า element อื่น นอกจากตาราง
+---------------------------*/
+
+/*------------------------ media query pc 1920x1080 -----------------------*/
+
+/*---------- ขนาดจะอยู่ระหว่างครึ่งหน้าจอ-------------*/
+
+@media only screen and (max-width: 1200px) {
+  header {
+    height: auto;
+  }
+
+  .nav-grid {
+    text-align: center;
+    grid-template-columns: 360px 1fr;
+  }
+
+  ul.menu {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 40px;
+    text-align: right;
+  }
+
+  ul.menu li {
+    height: 4rem;
+  }
+
+  .logo {
+    margin-top: 40px;
+  }
+
+  .logo h1 {
+    font-size: 23px;
+  }
+
+  img {
+    width: 0px;
+    height: 0px;
+  }
+
+  ul.menu li a {
+    padding: 7px 27px;
+    font-size: 23px;
+  }
+
+  a.button {
+    padding: 7px 27px;
+    font-size: 23px;
+  }
+
+  .content-heading {
+    margin-top: 15%;
+    width: 100%;
+    height: auto;
+  }
+
+  .heading-form-title {
+    font-size: 23px;
+  }
+
+  .content-profile {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+
+  .profile-form-title {
+    font-size: 23px;
+    padding-top: 10px;
+  }
+
+  .profile-form-title2 {
+    margin-top: 13px;
+    margin-left: 35px;
+    width: 90%;
+  }
+
+  .content-services {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .content-services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .content-services-item a {
+    font-size: 23px;
+    padding: 12px 32px;
+  }
+}
+
+/*------------------------ media query half display-----------------------*/
+
+@media only screen and (max-width: 800px) {
+  /*---------- ขนาดจะอยู่ระหว่าง ipad ipad pro-------------*/
+  header {
+    height: auto;
+  }
+
+  .nav-grid {
+    text-align: center;
+    grid-template-columns: 250px 1fr;
+  }
+
+  ul.menu {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 40px;
+    text-align: right;
+  }
+
+  ul.menu li {
+    height: 4rem;
+  }
+
+  .logo {
+    margin-top: 40px;
+  }
+
+  .logo h1 {
+    font-size: 15px;
+  }
+
+  img {
+    width: 0px;
+    height: 0px;
+  }
+
+  ul.menu li a {
+    padding: 6px 14px;
+    font-size: 15px;
+  }
+
+  a.button {
+    padding: 6px 14px;
+    font-size: 15px;
+  }
+
+  .content-heading {
+    margin-top: 15%;
+    width: 100%;
+    height: auto;
+  }
+
+  .heading-form-title {
+    font-size: 15px;
+  }
+
+  .content-profile {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .profile-form-title {
+    font-size: 15px;
+    padding-top: 10px;
+  }
+
+  .profile-form-title2 {
+    margin-top: 13px;
+    margin-left: 25px;
+    width: 90%;
+  }
+
+  .content-services {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .content-services-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+  }
+
+  .content-services-item a {
+    font-size: 15px;
+    padding: 9px 23px;
+  }
+
+  .content-services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .content-services-item a {
+    font-size: 15px;
+    padding: 7px 27px;
+  }
+}
+
+/*------------------------ media query mobile -----------------------*/
+
+/*---------- ขนาดจะอยู่ระหว่างมือถือ ------------*/
+
+@media only screen and (max-width: 480px) {
+  header {
+    height: auto;
+  }
+
+  .nav-grid {
+    text-align: center;
+    grid-template-columns: 170px 1fr;
+  }
+
+  ul.menu {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 11%;
+  }
+
+  ul.menu li {
+    height: 2.5rem;
+  }
+
+  .logo {
+    margin-top: 26px;
+  }
+
+  .logo h1 {
+    font-size: 10px;
+  }
+
+  img {
+    width: 0px;
+    height: 0px;
+  }
+
+  ul.menu li a {
+    padding: 3px 10px;
+    font-size: 10px;
+  }
+
+  a.button {
+    font-size: 10px;
+  }
+
+  .content-heading {
+    margin-top: 15%;
+    width: 100%;
+    height: auto;
+  }
+
+  .heading-form-title {
+    font-size: 10px;
+  }
+
+  .content-profile {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+
+  .profile-form-title {
+    font-size: 10px;
+    padding-top: 10px;
+  }
+
+  .profile-form-title2 {
+    margin-top: 13px;
+    margin-left: 19px;
+    width: 90%;
+  }
+
+  .content-services {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .content-services-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .content-services-item a {
+    font-size: 10px;
+    padding: 9px 23px;
+  }
+}

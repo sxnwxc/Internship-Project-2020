@@ -1,0 +1,160 @@
+/*---------- import font google  ไม่ต้องแก้อะไร เป็นการ import font เฉยๆ -------------*/
+
+/*------------------------ font style -----------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/*---------- โค้ด body ตัวเว็บทั้งหน้า -------------*/
+
+/*------------------------ body -----------------------*/
+
+* {
+  /*---------- ทำการ reset -------------*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.bg-img {
+  /*---------- คลาสรูปภาพพื้นหลังแก้เฉพาะตรงนี้ -------------*/
+  background-image: url("../../images/bg04.png");
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+/*------------------------ container box -----------------------*/
+
+.container {
+  /*---------- คลาส container (ขนาด-ความกว้าง) คลุม content ทั้งหมด -------------*/
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*------------------------ header -----------------------*/
+
+header {
+  /*---------- พื้นหลัง navbar -------------*/
+  width: 100%;
+  height: 80px;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 2px 3px 2px 2px rgba(122, 122, 122, 0.1);
+}
+
+.nav-grid {
+  /*---------- วางกริด-------------*/
+  display: grid;
+}
+
+.logo {
+  /*---------- ตัวอักษรชื่อระบบ แก้ตรงนี้ อันนี้มีตั้งความห่าง-สูง กับ สีตัวอักษรไว้ -------------*/
+  margin-top: 5px;
+  color: black;
+  text-align: center;
+}
+
+.logo h1 {
+  /*---------- ตัวอักษรชื่อระบบ แก้ตรงนี้ อันนี้มีตั้งขนาด ลักษณะ cursor ตัวอักษรไว้ -------------*/
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: "Sarabun", sans-serif;
+  cursor: context-menu;
+  /*---------- cursor คือ เวลาเลื่อนเม้าส์ไปขี้จะเป็นรูป context-menu  -------------*/
+}
+
+img {
+  /*---------- โลโก้ -------------*/
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+/*------------------------ content -----------------------*/
+
+.content {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/*------------------------ content heading -----------------------*/
+
+.content-heading {
+  /*---------- คลาสส่วนยินดีต้อนรับ-------------*/
+  width: 100%;
+  margin-top: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 3px 4px 3px 3px rgba(122, 122, 122, 0.1);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/*------------------------ content service -----------------------*/
+
+.content-services {
+  /*---------- คลาสส่วนปุ่มเซอร์วิส ------------*/
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.content-services-grid {
+  /*---------- ควางกริด 3 ช่อง ห่างกัน 3 rem-------------*/
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+  width: 40%;
+  margin-left: 25%;
+}
+
+.content-services-item {
+  /*---------- รูปแบบของปุ่ม-------------*/
+  background: white;
+  border: 3px solid #162280;
+  box-shadow: 2px 3px 2px 2px rgba(122, 122, 122, 0.1);
+  border-radius: 40px;
+  transition: 0.3s ease-in-out;
+}
+
+.content-services-item:hover {
+  /*---------- เวลาลากเม้าส์ไปชี้ที่ปุ่มจะเป็นสีม่วงทั้งหมด -------------*/
+  background: #404cbf;
+  border: none;
+}
+
+.content-services-item a {
+  /*---------- ตัวอักษรภายในปุ่ม-------------*/
+  text-align: center;
+  display: block;
+  font-family: "Sarabun", sans-serif;
+  text-transform: uppercase;
+  font-size: 17px;
+  color: black;
+  padding: 7px 27px;
+}
+
+.content-services-item a:hover {
+  /*---------- เวลาลากเม้าส์ไปที่ปุ่ม ตัวอักษรภายในปุ่มจะเป็นสีขาว-------------*/
+  text-decoration: none;
+  color: white;
+}
+
+/*----------ปฏิทิน-------------*/
+#calendar {
+  max-width: 660px;
+  margin: 0 auto;
+  font-size: 12px;
+  font-family: "Sarabun", sans-serif;
+  background: white;
+}
